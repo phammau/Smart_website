@@ -1,0 +1,59 @@
+/* ProductItem*/
+.product-item {
+    display: flex;
+    align-items: flex-start;
+    /* Canh các thành phần theo hàng ngang, trên cùng 1 dòng */
+    gap: 30px;
+    /* Khoảng cách giữa ảnh và thông tin */
+    margin-bottom: 40px;
+}
+
+/* Hình ảnh sản phẩm */
+.product-image img {
+    width: 300px;
+    /* Hình to hơn */
+    border-radius: 10px;
+    display: block;
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-info h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    color: green;
+    margin-bottom: 20px;
+}
+
+.description-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.add-to-cart {
+    margin-top: 30px;
+}
+
+.add-to-cart button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-to-cart button:hover {
+    background-color: #45a049;
+}

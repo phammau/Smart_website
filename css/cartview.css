@@ -1,0 +1,76 @@
+.listCart {
+    width: 700px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listCart h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.listCart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.listCart thead {
+    background-color: #f9fafb;
+}
+
+.listCart th,
+.listCart td {
+    text-align: center;
+    padding: 12px 8px;
+    border: 1px solid #333;
+}
+
+.listCart th {
+    font-weight: bold;
+    color: #333;
+}
+
+.listCart tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.listCart img {
+    width: 80px;
+    border-radius: 5px;
+}
+
+.listCart .delete-link {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.listCart .delete-link:hover {
+    text-decoration: underline;
+}
+
+.listCart .total-section {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.listCart .place-order {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.listCart .place-order:hover {
+    background-color: #45a049;
+}

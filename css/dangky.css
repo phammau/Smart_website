@@ -1,0 +1,49 @@
+.dangky {
+    width: 400px;
+    margin: 0px auto;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.dangky p {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.dangky input[type="email"],
+.dangky input[type="text"],
+.dangky input[type="password"] {
+    width: 400px;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dangky input[type="submit"],
+.dangky input[type="reset"] {
+    padding: 7px 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+    background-color: #5A2A83;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dangky input[type="submit"]:hover,
+.dangky input[type="reset"]:hover {
+    background-color: #7e43a6;
+}
+
+.thongbao {
+    color: blue;
+}

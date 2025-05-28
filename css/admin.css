@@ -1,0 +1,120 @@
+/* ==== RESET ==== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* ==== HEADER ==== */
+.header {
+    background-color: #e5e5e5;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ==== MENU ==== */
+.menu {
+    background-color: #000;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    border-right: 1px solid #444;
+}
+
+.menu ul li:last-child {
+    border-right: none;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #444;
+}
+
+/* ==== MAIN CONTENT ==== */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 10px auto;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* ==== TITLE ==== */
+.container h3 {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* ==== TABLE ==== */
+table {
+    width: 100%;
+    /* Đảm bảo bảng chiếm toàn bộ chiều rộng container */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+    /* Tùy chọn: Giúp các cột phân bố đều */
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #eee;
+}
+
+/* ==== BUTTONS ==== */
+button {
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button.edit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.row.mb10 input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+}
