@@ -1,8 +1,8 @@
 <!-- kiem tra dieu kien xem mang co ton tai khong -->
 <?php
-    if (is_array($dm)) {
-        extract($dm);
-    }
+  if (is_array($dm)) {
+      extract($dm);
+  }
 ?>
 <div class="row">
   <div class="row frmtitle">

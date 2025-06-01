@@ -21,23 +21,23 @@
                     if (isset($_SESSION['mycart']) && !empty($_SESSION['mycart'])) {
                     foreach ($_SESSION['mycart'] as $cart) {
                         $hinh = $img_path.$cart[1];
-                         $thanhtien = $cart[5];
+                        $thanhtien = $cart[5];
                         $tong+=$thanhtien;
                         $xoasp ='<a href="index.php?quanly=deletecart&idcart='.$i.'"><input type="button" value="delete"></a>';
 
                         echo'<tr>
                                 <td><img src="'.$hinh.'" alt="" height="60px"></td>
                                 <td>'.$cart[2].'</td>
-                                <td>'.$cart[3].'</td>
+                                <td>'.number_format($cart[3], 0, ',', '.').'đ</td>
                                 <td>'.$cart[4].'</td>
-                                <td>'.$thanhtien.'</td>
+                                <td>'.number_format($thanhtien, 0, ',', '.').'đ</td>
                                 <td>'.$xoasp.'</td>
                             </tr>';
                         $i+=1;
                     }
                         echo'<tr>
                                 <td colspan="4">Total Orders</td>
-                                <td>'.$tong.'</td>
+                                <td>'.number_format($tong, 0, ',', '.').'đ</td>
                             </tr>';
                 }else {
                         echo '<tr><td colspan="6">Chưa có sản phẩm nào trong giỏ hàng.</td></tr>';

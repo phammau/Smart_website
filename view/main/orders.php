@@ -17,23 +17,23 @@
                 ?>
                 <div class="form-group">
                     <label for="name">Người đặt hàng</label>
-                    <input type="text" name="user" value="<?=$user?>">
+                    <input type="text" name="user" value="<?=$user?>"required>
                 </div>
                 <div class="form-group">
                     <label for="address">Địa chỉ</label>
-                    <input type="text" name="address" value="<?=$address?>">
+                    <input type="text" name="address" value="<?=$address?>"required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" name="email" value="<?=$email?>">
+                    <input type="text" name="email" value="<?=$email?>"required>
                 </div>
                 <div class="form-group">
                     <label for="phone">Điện thoại</label>
-                    <input type="text" name="tel" value="<?=$tel?>">
+                    <input type="text" name="tel" value="<?=$tel?>"required>
                 </div>
                 <div class="form-group">
                     <label for="day">Ngày đặt hàng</label>
-                    <input type="text" name="dayy" value="<?=$day?>">
+                    <input type="text" name="dayy" value="<?=$day?>"readonly>
                 </div>
                     <table>
                         <thead>
@@ -59,15 +59,15 @@
                                         echo'<tr>
                                                 <td><img src="'.$hinh.'" alt="" height="60px"></td>
                                                 <td>'.$cart[2].'</td>
-                                                <td>'.$cart[3].'</td>
+                                                <td>'.number_format($cart[3], 0, ',', '.').'đ</td>
                                                 <td>'.$cart[4].'</td>
-                                                <td>'.$thanhtien.'</td>
+                                                <td>'.number_format($thanhtien, 0, ',', '.').'đ</td>
                                             </tr>';
                                         $i+=1;
                                     }
                                         echo'<tr>
                                                 <td colspan="4">Total Orders</td>
-                                                <td>'.$tong.'</td>
+                                                <td>'.number_format($tong, 0, ',', '.').'đ</td>
                                             </tr>';
                                 }else {
                                         echo '<tr><td colspan="6">Chưa có sản phẩm nào trong giỏ hàng.</td></tr>';

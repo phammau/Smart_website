@@ -1,4 +1,4 @@
-/* ==== RESET ==== */
+/*RESET*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +10,7 @@ body {
     background-color: #f2f2f2;
 }
 
-/* ==== HEADER ==== */
+/*HEADER*/
 .header {
     background-color: #e5e5e5;
     padding: 20px;
@@ -19,7 +19,7 @@ body {
     font-weight: bold;
 }
 
-/* ==== MENU ==== */
+/*MENU*/
 .menu {
     background-color: #000;
 }
@@ -50,7 +50,7 @@ body {
     background-color: #444;
 }
 
-/* ==== MAIN CONTENT ==== */
+/*MAIN CONTENT*/
 .container {
     width: 90%;
     max-width: 1000px;
@@ -60,14 +60,14 @@ body {
     border: 1px solid #ccc;
 }
 
-/* ==== TITLE ==== */
+/*TITLE*/
 .container h3 {
     background-color: #e0e0e0;
     padding: 10px;
     margin-bottom: 15px;
 }
 
-/* ==== TABLE ==== */
+/*TABLE*/
 table {
     width: 100%;
     /* Đảm bảo bảng chiếm toàn bộ chiều rộng container */
@@ -88,7 +88,7 @@ table th {
     background-color: #eee;
 }
 
-/* ==== BUTTONS ==== */
+/* BUTTONS*/
 button {
     padding: 5px 10px;
     margin: 2px;

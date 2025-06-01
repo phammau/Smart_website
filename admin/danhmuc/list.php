@@ -15,14 +15,14 @@
                     extract($danhmuc);
                     $suadm = "index.php?act=suadm&id=".$id;
                     $xoadm = "index.php?act=xoadm&id=".$id;
-                    echo' <tr>
+                    echo '<tr>
                             <td>'.$id.'</td>
                             <td>'.$name.'</td>
                             <td>
                                 <a href="'.$suadm.'"><button class="edit">Sửa</button></a>
                                 <a href="'.$xoadm.'"><button class="delete">Xóa</button>
                             </td>
-                         </tr>';
+                        </tr>';
                 }
              ?>
         </tbody>

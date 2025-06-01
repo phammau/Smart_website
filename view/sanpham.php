@@ -16,7 +16,7 @@
                     <img src="'.$hinh.'" alt=""/>
                     <h4>'.$name.'</h4>
                 </a>
-                <p class="price">'.$price.'</p>
+                <p class="price">'.number_format($price, 0, ',', '.').'đ</p>
                 <p>'.$description.'</p>
                 </div>';
             }

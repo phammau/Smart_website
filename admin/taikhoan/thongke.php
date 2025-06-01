@@ -33,7 +33,7 @@
                                 <td>'.$price.'</td>
                                 <td>'.$quantity.'</td>
                                 <td>'.$total.'</td>
-                             </tr>';
+                            </tr>';
                     }
                  ?>
             </tbody>

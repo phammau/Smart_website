@@ -5,6 +5,7 @@
     include("../model/sanpham.php");
     include("../model/taikhoan.php");
     include("../model/thongke.php");
+    include("../model/home_admin.php");
 
     //controler
     if(isset($_GET["act"])){
@@ -56,7 +57,7 @@
 
             // san pham
             case 'addsp':
-                //kiem tra xem nguoi dung có click vao nut add khong
+                //kiem tra xem nguoi dung co click vao nut add khong
                 if (isset($_POST['themmoi']) && ($_POST['themmoi'])){
                     $tensp = $_POST['tensp'];
                     $giasp = $_POST['giasp'];
@@ -67,9 +68,9 @@
                     $target_dir = "../upload/";
                     $target_file = $target_dir . basename($_FILES["anhsp"]["name"]);
                     if (move_uploaded_file($_FILES["anhsp"]["tmp_name"], $target_file)) {
-                         $anhsp = $_FILES['anhsp']['name'];
+                        $anhsp = $_FILES['anhsp']['name'];
                     } else {
-                         $anhsp = "";
+                        $anhsp = "";
                     }
                     //xử lý chỉ cho nhập số
                     if (!is_numeric($giasp)) {
@@ -123,15 +124,15 @@
                     $description = $_POST['description'];
                     $filename = $_FILES['anhsp']['name'];//lay theo ten anh
                     $iddm = $_POST['iddm'];
-                     $id = $_POST['id'];
+                    $id = $_POST['id'];
                      
                     //xu ly anh 
                     $target_dir = "../upload/";
                     $target_file = $target_dir . basename($_FILES["anhsp"]["name"]);
                     if (move_uploaded_file($_FILES["anhsp"]["tmp_name"], $target_file)) {
-                         $anhsp = $_FILES['anhsp']['name'];
+                        $anhsp = $_FILES['anhsp']['name'];
                     } else {
-                         $anhsp = "";
+                        $anhsp = "";
                     }
        
                     //xử lý chỉ cho nhập số
@@ -176,12 +177,45 @@
                 include("taikhoan/thongke.php");
                 break;
 
+            case 'Xuat_file':
+                //Lấy dữ liệu từ bảng home_admin
+                $data = loadall_home_admin();
+                        
+                // Tạo file CSV
+                header('Content-Type: text/csv; charset=utf-8');
+                header('Content-Disposition: attachment; filename=thongke_home_admin.csv');
+                        
+                // Mở file "php://output" để ghi dữ liệu ra trình duyệt
+                $output = fopen('php://output', 'w');
+                        
+                // Ghi dòng tiêu đề
+                fputcsv($output, array('SỐ ĐƠN HÀNG TRONG NGÀY', 'DOANH THU TRONG NGÀY', 'TỔNG SỐ SẢN PHẨM', 'NGÀY'));
+                        
+                // Ghi dữ liệu
+                foreach ($data as $row) {
+                    fputcsv($output, array(
+                        $row['sodon'],
+                        $row['doanhthu'],
+                        $row['tongsosp'],
+                        $row['ngay']
+                    ));
+                }
+            
+                fclose($output);
+                exit; // Dừng xử lý sau khi xuất file
+                include("home_admin.php");
+                break;
+
+            case 'trangchu':
+                include("home_admin.php");
+                break;
+
             default:
-                include("home.php");
+                include("home_admin.php");
                 break;
         }
     }else{
-        include("home.php");
+        include("home_admin.php");
     }
     include("footer.php");
 ?>

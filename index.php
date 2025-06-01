@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang chủ</title>
+    <link rel="icon" href="upload/logo.png" type="image/x-icon" />
     <link rel="stylesheet"  href="css\style.css" />
     <link rel="stylesheet"  href="css\style.productitem.css"/>
     <link rel="stylesheet"  href="css\dangky.css"/>
@@ -131,7 +132,6 @@
                                 $price = $item[3];
                                 $quantity = $item[4];
                                 $total = $item[5];
-                                echo "<script>alert('Đặt hàng thành công!')</script>";
                                 insert_bill($user, $address, $email, $tel, $order_date, $product_name, $price, $quantity, $total);
                             }
                             echo "<script>alert('Đặt hàng thành công!'); window.location.href='index.php';</script>";
@@ -143,15 +143,6 @@
                         }
                     }
                     break;
-
-
-                    // if (isset($_SESSION['order_data'])) {
-                    //     echo "<script>alert('Bạn đã mua sản phẩm'); window.location='index.php';</script>";
-                    // }else {
-                    //    echo "<script>alert('Không có sản phẩm. Vui lòng kiểm tra lại!'); window.location='".$_SERVER['HTTP_REFERER']."';</script>";
-                    // }
-                    // unset($_SESSION['order_data']);
-                    // break;
                 
                 case "Huy_order":
                     unset($_SESSION['order_data']);

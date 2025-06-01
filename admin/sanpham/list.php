@@ -51,7 +51,7 @@
                                 <a href="'.$suasp.'"><button class="edit">Sửa</button></a>
                                 <a href="'.$xoasp.'"><button class="delete">Xóa</button></a>
                             </td>
-                         </tr>';
+                        </tr>';
                 }
              ?>
         </tbody>

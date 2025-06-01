@@ -22,10 +22,10 @@
             <option value = "0" <?php if ($iddm == 0) echo "selected"; ?>> Tất cả</option>
             <?php
              if (isset($listdanhmuc) && is_array($listdanhmuc)){
-                 foreach ($listdanhmuc as $danhmuc) {
-                    $select = ($iddm == $danhmuc['id']) ? "selected" : "";
-                    // if ($iddm == $id) $select = "selected"; else $select = "";              
-                    echo "<option value='".$danhmuc['id']."' ".$select." > ".$danhmuc['name']."</option>";
+                foreach ($listdanhmuc as $danhmuc) {
+                  $select = ($iddm == $danhmuc['id']) ? "selected" : "";
+                  // if ($iddm == $id) $select = "selected"; else $select = "";              
+                  echo "<option value='".$danhmuc['id']."' ".$select." > ".$danhmuc['name']."</option>";
                 }
             }
             ?>

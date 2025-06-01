@@ -9,4 +9,9 @@
         $sql = "DELETE FROM bill";
         pdo_execute($sql);
     }
+
+    function get_thongke() {
+        $sql = "SELECT * FROM bill";
+        return  pdo_query($sql);
+    }
 ?>

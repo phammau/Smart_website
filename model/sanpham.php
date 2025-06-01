@@ -22,11 +22,13 @@ function loadall_sanpham($kyw,$iddm){
    $listsanpham = pdo_query($sql); // load du lieu
    return $listsanpham;
 }
+
 function loadall_sanpham_home(){
    $sql = "SELECT * FROM sanpham WHERE 1 ORDER BY id desc limit 0,12";
    $listsanpham = pdo_query($sql); // load du lieu
    return $listsanpham;
 }
+
 function loadone_sanpham($id){
    $sql = "SELECT * FROM sanpham WHERE id=".$id;
    $dm = pdo_query_one($sql);
@@ -43,6 +45,7 @@ function load_ten_dm($iddm){
      return "";
   }
 }
+
 function update_sanpham($id, $iddm, $tensp, $giasp, $anhsp, $description){
    if ($anhsp != "") {
       $sql = "UPDATE sanpham SET iddm='".$iddm."', name='".$tensp."', price='".$giasp."', image='".$anhsp."', description='".$description."' WHERE id=".$id;
