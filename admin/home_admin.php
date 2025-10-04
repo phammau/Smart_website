@@ -36,14 +36,14 @@
                             <td>' . $stats['totalQuantity'] . '</td>
                             <td>' . $date . '</td>
                         </tr>';
-
+                    
                     insert_home_admin(
                         $stats['count'],
                         $stats['totalRevenue'],
                         $stats['totalQuantity'],
                         $date
                     );
-                }
+                    }
             ?>
         </tbody>
     </table>

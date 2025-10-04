@@ -14,4 +14,5 @@
         $sql = "DELETE FROM home_admin";
         pdo_execute($sql);
     }
+
 ?>

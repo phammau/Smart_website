@@ -180,30 +180,37 @@
             case 'Xuat_file':
                 //Lấy dữ liệu từ bảng home_admin
                 $data = loadall_home_admin();
-                        
-                // Tạo file CSV
-                header('Content-Type: text/csv; charset=utf-8');
-                header('Content-Disposition: attachment; filename=thongke_home_admin.csv');
-                        
-                // Mở file "php://output" để ghi dữ liệu ra trình duyệt
-                $output = fopen('php://output', 'w');
-                        
-                // Ghi dòng tiêu đề
-                fputcsv($output, array('SỐ ĐƠN HÀNG TRONG NGÀY', 'DOANH THU TRONG NGÀY', 'TỔNG SỐ SẢN PHẨM', 'NGÀY'));
-                        
-                // Ghi dữ liệu
+                
+                //Header để tải về file Excel (chỉ bảng)
+                header("Content-Type: application/vnd.ms-excel; charset=utf-8");
+                header("Content-Disposition: attachment; filename=thongke_home_admin.xls");
+                header("Pragma: no-cache");
+                header("Expires: 0");
+
+                // In bảng HTML (chỉ phần table)
+                echo '
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>SỐ ĐƠN HÀNG TRONG NGÀY</th>
+                                <th>DOANH THU TRONG NGÀY</th>
+                                <th>TỔNG SỐ SẢN PHẨM</th>
+                                <th>NGÀY</th>
+                            </tr>
+                        </thead>
+                        <tbody>';
+
                 foreach ($data as $row) {
-                    fputcsv($output, array(
-                        $row['sodon'],
-                        $row['doanhthu'],
-                        $row['tongsosp'],
-                        $row['ngay']
-                    ));
+                    echo '<tr>
+                            <td>' . $row['sodon'] . '</td>
+                            <td>' . number_format($row['doanhthu'], 0, ',', '.') . '</td>
+                            <td>' . $row['tongsosp'] . '</td>
+                            <td>' . $row['ngay'] . '</td>
+                          </tr>';
                 }
             
-                fclose($output);
-                exit; // Dừng xử lý sau khi xuất file
-                include("home_admin.php");
+                echo '</tbody></table>';
+                exit;
                 break;
 
             case 'trangchu':
