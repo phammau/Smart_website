@@ -24,6 +24,6 @@
     </div>
     <!-- Copyright -->
     <div class="footer-bottom">
-        @ SMART BUY 2025
+        @ SMART BUY 2026
     </div>
 </footer>

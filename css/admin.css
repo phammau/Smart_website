@@ -73,6 +73,7 @@ table {
     /* Đảm bảo bảng chiếm toàn bộ chiều rộng container */
     border-collapse: collapse;
     margin-bottom: 20px;
+    font-size: 12px;
     table-layout: fixed;
     /* Tùy chọn: Giúp các cột phân bố đều */
 }
